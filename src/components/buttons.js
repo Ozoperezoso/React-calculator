@@ -1,8 +1,15 @@
-import react from 'react';
+import React from 'react';
+import '../stylesheets/buttons.css'
 
-function Buttons(props) {
+function Button(props) {
+
+  const esOperador = value =>{
+    return isNaN(value) && (value != '.') && (value != '=');
+  };
+
+
   return(
-    <div>
+    <div className={`button-container ${esOperador(props.children)? 'operator' :''}`.trimEnd()}>
       {props.children}
     </div>
 
@@ -11,3 +18,5 @@ function Buttons(props) {
   )
 
 }
+
+export default Button;
