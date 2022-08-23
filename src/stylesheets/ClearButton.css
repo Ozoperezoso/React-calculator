@@ -1,14 +1,15 @@
-.input{
-    height:100px;
+.clear-button{
+    height:83px;
     display: flex;
     flex: 1 1;
     justify-content: center;
     align-items: center;
     font-weight: bold;
     font-size: 38px;
-    background-color: #1b1b32;
+    background-color: red;
     color: white;
     border-radius: 25px;
     border: 2px solid white;
     margin: 4px;
+    cursor: pointer;
 }

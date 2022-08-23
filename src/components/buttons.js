@@ -1,5 +1,5 @@
 import React from 'react';
-import '../stylesheets/buttons.css'
+import '../stylesheets/Buttons.css'
 
 function Button(props) {
 
@@ -7,9 +7,9 @@ function Button(props) {
     return isNaN(value) && (value != '.') && (value != '=');
   };
 
-
   return(
-    <div className={`button-container ${esOperador(props.children)? 'operator' :''}`.trimEnd()}>
+    <div className={`button-container ${esOperador(props.children)? 'operator' :''}`.trimEnd()}
+      onClick={()=>props.handleClick(props.children)}>
       {props.children}
     </div>
 
