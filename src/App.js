@@ -1,8 +1,8 @@
 import './App.css';
-import santa from '../src/images/santa.png';
 import Button from './components/Buttons';
 import Screen from './components/Screen';
 import ClearButton from './components/ClearButton';
+import Logo from './components/Logo';
 import {evaluate} from 'mathjs';
 import {useState} from 'react';
 
@@ -24,12 +24,7 @@ function App() {
 
   return (
     <div className='App'>
-      <div className='app-logo-container'>
-        <img 
-          className='santa-logo'
-          src={santa}
-          alt='santa-logo' />
-      </div>
+      <Logo/>
       <div className='calculator-container'>
         <Screen input={input}/>
         <div className='row'>
